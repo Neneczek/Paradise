@@ -21,6 +21,7 @@ body {
     
 }
 
+
 //NAV
 
 .burger-btn{
@@ -32,29 +33,29 @@ body {
 	border: 1px solid transparent;
 	cursor: pointer;
 	z-index: 1000;
-
+	
 	&:focus{
 		outline: none;
 		border: 1px solid rgba(255,255,255,.5);
 		border-radius: 8px ;
 	}
-
+	
 	&:hover{
 		.burger-btn__bars::after,.burger-btn__bars::before{
 			width: 100%;
 		}
 	}
-
+	
 	&__box{
 		position: relative;
 		width: 40px;
 		height: 30px;
 	}
-
+	
 	&__bars, &__bars::after, &__bars::before{
 		@include burgerBtn;
 	}
-
+	
 	&__bars{
 		width: 100%;
 		&::after{
@@ -81,36 +82,36 @@ body {
 	transform: translateX(100%);
 	background-image: $blue-gradient-solid;
 	z-index: 100;
-
+	
 	&--active{
 		transform: translateX(0);
 	}
-
-		&__item{
-			position: relative;
-			display: block;
-			color: $pure-white;
-			margin: 0.5em 0;
-			padding: 0.5em 2em;
-			font-size: 2.8rem;
-			text-decoration: none;
-
-			&::before{
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 3px;
-				height: 100%;
-				background-color: $pure-white;
-				content: '';
-				transform: scaleY(0);
-				transition: transform .3s;
-			}
-
-			&:hover::before{
-				transform: scaleY(1);
-			}
+	
+	&__item{
+		position: relative;
+		display: block;
+		color: $pure-white;
+		margin: 0.5em 0;
+		padding: 0.5em 2em;
+		font-size: 2.8rem;
+		text-decoration: none;
+		
+		&::before{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 3px;
+			height: 100%;
+			background-color: $pure-white;
+			content: '';
+			transform: scaleY(0);
+			transition: transform .3s;
 		}
+		
+		&:hover::before{
+			transform: scaleY(1);
+		}
+	}
 }
 
 @keyframes navItemsAnimation {
@@ -127,6 +128,11 @@ body {
 	
 }
 
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before{
+	background-color: $dark;
+}
 
 //header
 
@@ -142,17 +148,17 @@ body {
 	color: $pure-white;
 	@include heroImages('../img/palma640.jpg');
 	background-attachment: scroll;
-
+	
 	&__heading{
 		font-family: 'Dancing Script', cursive;
 		font-size: 4.8rem;
 		font-weight: 300;
 	}
-
+	
 	&__text{
 		font-size: 1.4rem;
 	}
-
+	
 	&__btn{
 		margin-top: 2em;
 		padding: 0.8em 1.6em;
@@ -164,7 +170,7 @@ body {
 		text-decoration: none;
 		text-transform: uppercase;
 		cursor: pointer;
-
+		
 		&::before{
 			background-color: $light-white;
 		}
@@ -174,45 +180,45 @@ body {
 //MAIN
 
 //DREAMS SECTION
-	.dreams{
-		&__box{
-			display: flex;
+.dreams{
+	&__box{
+		display: flex;
 			flex-direction: column;
 			margin: 2em 0;
 
 		}
-
+		
 		&__img{
 			width: 100%;
 			margin-bottom: 1em;
 		}
-
+		
 		&__title{
 			margin-bottom: 0.5em;
 		}
-
+		
 		&__text{
 			font-size: 1.4rem;
 		}
 	}
-
-//hero-img
-
-.hero-img{
-	position: relative;
-	padding: 10em 2em;
-	@include heroImages('../img/polinezjamala.jpg');
-	text-align: center;
-	color: $pure-white;
-	overflow: hidden;
-
-	&__title{
-		font-family: 'Dancing Script', cursive;
-		font-size: 4.8rem;
-		margin-bottom: 0.5em;
-	}
-	&__text{
-		padding: 1em 0;
+	
+	//hero-img
+	
+	.hero-img{
+		position: relative;
+		padding: 10em 2em;
+		@include heroImages('../img/polinezjamala.jpg');
+		text-align: center;
+		color: $pure-white;
+		overflow: hidden;
+		
+		&__title{
+			font-family: 'Dancing Script', cursive;
+			font-size: 4.8rem;
+			margin-bottom: 0.5em;
+		}
+		&__text{
+			padding: 1em 0;
 	}
 }
 
@@ -225,7 +231,7 @@ body {
 		color: $pure-white;
 		text-align: center;
 		perspective: 1000px;
-
+		
 		&:hover{
 			.islands__card-img{
 				transform: rotateY(-180deg);
@@ -236,14 +242,14 @@ body {
 				opacity: 1;
 			}
 		}
-
+		
 		&-img{
 			padding: 2em;
 			height: 100%;	
 			border-radius: 8px;
 			background-size: cover;
 			transition: transform 1s, opacity 1s;
-
+			
 			&--first{
 				background-image: $light-blue-gradient, url('../img/lodka.jpg');
 			}
@@ -253,24 +259,24 @@ body {
 			&--third{
 				background-image: $purple-gradient, url('../img/hawaj.jpg');
 			}
-
+			
 			&-title{
 				font-family: 'Dancing Script', cursive;
 				font-size: 2.8rem;
 			}
-
+			
 			&-info{
 				position: absolute;
 				bottom: 30px;
 				right: 30px;
 				font-size: 1.8rem;
-
+				
 				i{
 					margin-right: 0.3em;
 				}
 			}
 		}
-
+		
 		&-info{
 			position: absolute;
 			top: 0;
@@ -285,30 +291,30 @@ body {
 			transform: rotateY(180deg);
 			transition: transform 1s, opacity 1s;
 			opacity: 0;
-
+			
 			&-title{
 				@include islandCardStyles;
 				top: 1.2em;
 				font-family: 'Dancing Script', cursive;
 				font-size: 2.8rem;
 			}
-
+			
 			&-list{
 				margin: 0 auto;
 				width: 70%;
 				list-style: none;
-
+				
 				&-item{
 					padding: 1em;
 					font-size: 1.4rem;
 					border-bottom: 1px solid $light-white;
-
+					
 					&:last-child{
 						border-bottom: none;
 					}
 				}
 			}
-
+			
 			&-btn{
 				@include islandCardStyles;
 				bottom: 2em;
@@ -318,13 +324,13 @@ body {
 				border: none;
 				background-color: $green-color;
 				cursor: pointer;
-
+				
 				&::before{
 					background-color: $green-color-hover;
 				}
 			}
 		}
-
+		
 	}
 }
 
@@ -336,22 +342,22 @@ body {
 	.section-heading{
 		color: $pure-white;
 	}
-
+	
 	&__option{
 		margin: 1em 0;
 		box-shadow: 5px 5px 10px #2e2e2e2e;
 		background-color: $pure-white;
 		overflow: hidden;
-
+		
 		&-img{
 			width: 100%;
 			transition: transform .3s;
-
+			
 			&:hover{
 				transform: scale(1.1);
 			}
 		}
-
+		
 		&-info{
 			padding: 2em;
 			background-color: $pure-white;
@@ -376,13 +382,13 @@ body {
 			border: none;
 			border-radius: 8px;
 			cursor: pointer;
-
+			
 			&::before{
 				background-color: $secondary-color;
 			}
 		}
 	}
-
+	
 	
 }
 //REVIEWS
@@ -401,18 +407,18 @@ body {
 		border-radius: 8px;
 		box-shadow: 3px 3px 10px #2e2e2e;
 		transition: transform .3s;
-
+		
 		&:hover{
 			transform: scale(.95);
 		}
 	}
-
+	
 	&__box-img{
 		position: absolute;
 		top: 8%;
 		left: 75%;
 		transform: translate(-50%,-50%);
-
+		
 		img{
 			width: 80px;
 			height: 80px;
@@ -420,13 +426,13 @@ body {
 			border-radius: 50%;
 		}
 	}
-
+	
 	&__box-quote{
 		margin-bottom: 1em;
 		font-size: 3rem;
 		color: $main-color;
 	}
-
+	
 	&__box-text{
 		margin-bottom: 1em;
 		font-size: 1.4rem;
@@ -443,22 +449,22 @@ body {
 	.white-block-left{
 		background-color: $dark;
 	}
-
+	
 	&__form{
 		display: flex;
 		flex-direction: column;
 	}
-
+	
 	&__form-top{
 		display: flex;
 		flex-direction: column;
 	}
-
+	
 	&__form-label{
 		margin-bottom: 0.5em;
 		text-transform: uppercase;
 	}
-
+	
 	&__form-input{
 		@include contactForm;
 	}
@@ -467,7 +473,7 @@ body {
 		resize: vertical;
 		min-height: 150px;
 	}
-
+	
 	&__form-btn{
 		
 		align-self: flex-end;
@@ -479,7 +485,7 @@ body {
 		border-radius: 8px;
 		background-color: $main-color;
 		cursor: pointer;
-
+		
 		&::before{
 			background-color: $secondary-color;
 		}
@@ -489,7 +495,7 @@ body {
 .footer{
 	color: $pure-white;
 	background-color: $dark;
-
+	
 	.wrapper{
 		padding: 6em 2em 2em;
 	}
@@ -503,25 +509,25 @@ body {
 	}
 	&__box-social{
 		margin: 2em 0 1em;
-
+		
 	}
-
+	
 	&__box-link{
 		padding: 0 0.3em;
 		font-size: 3.6rem;
 		color: $pure-white;
 		text-decoration: none;
 		transition: color .3s;
-
+		
 		&:first-child{
 			padding-left: 0;
 		}
-
+		
 		&:hover{
 			color: $light-white;
 		}
 	}
-
+	
 	&__bottom-text{
 		padding: 2em;
 		text-align: center;
@@ -535,7 +541,7 @@ body {
 		&__box{
 			flex-direction: row;
 			justify-content: space-between;
-
+			
 			&-text{
 				width: 55%;
 				&--right{
@@ -549,23 +555,23 @@ body {
 				}
 			}
 		}
-
+		
 		&__img{
 			margin-bottom: 0;
 			max-height: 300px;
 		}
 	}
-
+	
 	.offers{
 		&__option{
 			display: flex;
 			margin: 2em 0;
 			width: 100%;
-
+			
 			&-img{
 				width: 50%;
 				height: auto;
-
+				
 				&--right{
 					order: 1;
 				}
@@ -595,7 +601,7 @@ body {
 	.header{
 		&__heading{
 			font-size: 6.6rem;
-
+			
 		}
 		&__text{
 			font-size: 2.2rem;
@@ -604,54 +610,54 @@ body {
 			font-size: 1.6rem;
 		}
 	}
-
+	
 	.dreams{
 		&__text{
 			font-size: 1.8rem;
 		}
 	}
-
+	
 	.hero-img{
 		padding: 30rem 2em;
-
+		
 		hr{
 			margin: 0 auto;
 			width: 70%;
 		}
-
+		
 		&__text{
 			font-size: 2.2rem;
 		}
-
+		
 	}
-
+	
 	.islands{
 		&__cards{
 			display: flex;
 			justify-content: center;
 			flex-wrap: wrap;
 		}
-
+		
 		&__card{
 			margin: 1em;
 			width: 45%;
 		}
 	}
-
+	
 	.footer{
 		&__boxes{
 			display: flex;
 			justify-content: space-between;
 		}
-
+		
 		&__box-desktop{
 			display: block;
 		}
-
+		
 		&__box{
 			margin: 0 2em;
 			width: 25%;
-
+			
 			&:first-child{
 				width: 50%;
 			}
@@ -677,57 +683,57 @@ body {
 		top: 50px;
 		right: 50px;
 	}
-
+	
 	.header{
 		background-image: $blue-gradient, url('../img/palma1920.jpg');
-
+		
 		&__heading{
 			font-size: 10rem;
 		}
 	}
-
+	
 	.nav{
 		&__item{
 			font-size: 4.8rem;
 		}
 	}
-
+	
 	.dreams{
 		&__box{
 			margin: 5em 0;
-
+			
 			&-text{
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-end;
 				margin-bottom: 2.5em;
-
+				
 			}
 		}
-
+		
 		&__title{
 			font-size: 3.6rem;
 		}
-
+		
 		&__text{
 			font-size: 2.2rem;
 		}
 	}
-
+	
 	.hero-img{
 		padding: 40rem 2em;
 		background-image: $blue-gradient, url('../img/polinezjaduza.jpg');
-
+		
 		&__title{
 			font-size: 7.2rem;
 		}
-
+		
 		hr{
 			width: 60%;
 			max-width: 900px;
 		}
 	}
-
+	
 	.offers{
 		background-image: $blue-gradient, url('../img/malediwyduze.jpg');
 		&__option{
@@ -749,3 +755,7 @@ body {
 		}
 	}
 }
+
+
+
+
